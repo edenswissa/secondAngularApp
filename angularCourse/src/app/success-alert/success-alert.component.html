@@ -1,1 +1,14 @@
-<button type="button" class="btn btn-success">Good</button>
+<button type="button" class="btn btn-success"
+    [disabled]= "!allowButton"
+    (click)="onButtonClick()" >Good</button>
+    <input 
+    type="text"
+    class="form-control"
+    (input)="onInputEvent($event)">
+    <input type="text"
+    class="form-control"
+    [(ngModel)]="twoWayForDataBinding">
+ <p>{{ oneWayForDataBinding }} </p>
+ <p>{{ twoWayForDataBinding }} </p>
+ <p>{{ allowButton }} </p>
+ <p>{{ buttonClick }} </p>
